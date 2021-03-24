@@ -1,0 +1,20 @@
+.model tiny
+.386
+.data
+istr1 db '0123456789'
+cnt db 10
+.code
+.startup
+	lea si, istr1
+	mov cl, cnt
+	cld
+	mov bp, 10
+x1:	movsb
+	lodsb 
+	mov [bp], al
+	inc bp
+	dec cx
+	dec cx
+	jnz x1
+.exit
+end
