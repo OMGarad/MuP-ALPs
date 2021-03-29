@@ -6,6 +6,7 @@
 	min db 'Z'
 .code
 .startup
+	; LabTest1 for Tuesday's lab
 	lea si, sttr
 	mov cx, COUNT
 	mov al, min
