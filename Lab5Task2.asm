@@ -1,15 +1,15 @@
 .model tiny
+.486
 .data
-	filename db 'Lab5Tsk1.txt', 0
-	dat1 db 0dh, 0ah, "DH-1"
-	dat2 db 0dh, 0ah, "306-L"
+	filename db 'LAB5TSK1.txt', 0
+	hostel db "DH-1", 0dh, 0ah
+	room_no db "306-L", 0dh, 0ah
 	handle dw ?
 .code
 .startup
-	;Open the file
 	mov ah, 3dh
 	lea dx, filename
-	mov cl, 02h
+	mov al, 02h
 	int 21h
 	mov handle, ax
 	
@@ -17,23 +17,17 @@
 	mov bx, handle
 	mov al, 02h
 	mov cx, 0000
-	mov bx, 0000
+	mov dx, 0000
 	int 21h
 	
 	mov ah, 40h
 	mov bx, handle
-	lea dx, dat1
-	mov cl, 6
-	int 21h
-	
-	mov ah, 40h
-	mov bx, handle
-	lea dx, dat2
-	mov cl, 7
+	lea dx, hostel
+	mov cx, 13
 	int 21h
 	
 	mov bx, handle
 	mov ah, 3eh
-	int 21h	
+	int 21h
 .exit
 end
