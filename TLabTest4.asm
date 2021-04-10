@@ -73,7 +73,7 @@
 	
 	inc dh
 	
-	;loop of ~
+	;loop of ~s
 x1:	mov ah, 02h
 	mov bh,00
 	mov dl,0
