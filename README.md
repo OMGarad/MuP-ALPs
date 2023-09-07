@@ -1,2 +1,3 @@
 # MuP-ALPs
-All ALP programs I coded for the labs of the course Microprocessors and Interfacing done in 2-2.
+
+Created in partial requirement of the course CS F241: Microprocessor Programming & Interfacing conducted at BITS Pilani K K Birla Goa Campus.
